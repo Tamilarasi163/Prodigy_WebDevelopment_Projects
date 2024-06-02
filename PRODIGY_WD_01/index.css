@@ -1,0 +1,126 @@
+body, html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   font-family: Arial, sans-serif;
+   box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   padding: 10px 20px;
+   background: rgba(0, 0, 0, 0.4);
+   z-index: 1000;
+}
+
+.navbar .logo {
+   line-height: 30px;
+   float: left;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: #fff;
+}
+
+.navbar ul {
+   list-style: none;
+   float: right;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.navbar ul li {
+   display: inline;
+}
+
+.navbar ul li a {
+   color: #fff;
+   padding: 15px 20px;
+   text-transform: uppercase;
+   text-decoration: none;
+}
+
+.navbar ul li a:hover {
+   background: rgba(0, 0, 0, 0.5);
+   border-radius: 6px;
+}
+
+.menu-toggle {
+   display: none;
+   font-size: 24px;
+   color: #fff;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+   position: relative;
+   margin-top: 50px;
+}
+
+#hero img {
+   width: 100%;
+   height: calc(100vh - 50px);
+   object-fit: cover;
+}
+
+/* Footer */
+footer {
+   text-align: center;
+   padding: 20px 0;
+   background: #333;
+   color: #fff;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .navbar {
+       padding: 10px;
+   }
+
+   .navbar .logo {
+       font-size: 18px;
+   }
+
+   .navbar ul {
+       float: none;
+       text-align: center;
+       display: none;
+       flex-direction: column;
+       width: 100%;
+   }
+
+   .navbar ul.active {
+       display: flex;
+   }
+
+   .navbar ul li {
+       display: block;
+       width: 100%;
+   }
+
+   .menu-toggle {
+       display: block;
+       float: right;
+   }
+}
+
+@media (max-width: 480px) {
+   .navbar .logo {
+       font-size: 16px;
+   }
+
+   .navbar ul li a {
+       padding: 10px 15px;
+   }
+}

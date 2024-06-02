@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator input,
+.calculator button {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.calculator input {
+    grid-column: span 4;
+}
+
+.equal {
+    grid-column: span 4;
+    background-color: #4CAF50;
+    color: white;
+}
